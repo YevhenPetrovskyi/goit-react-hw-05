@@ -1,0 +1,39 @@
+.movieDescription {
+  background-color: #3f4340;
+  padding: 15px;
+}
+
+.movieTitle {
+  font-size: 17px;
+  width: -webkit-fill-available;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 278px;
+}
+
+.starOuter {
+  position: relative;
+  font-size: 25px;
+  display: inline-block;
+}
+
+.starOuter::before {
+  content: '\2605 \2605 \2605 \2605 \2605\2605 \2605 \2605 \2605 \2605';
+  color: #1b1b1b33;
+}
+
+.starInner {
+  position: absolute;
+  font-size: 25px;
+  top: 0;
+  left: 0;
+
+  width: 0%;
+  overflow: hidden;
+}
+
+.starInner::before {
+  content: '\2605 \2605 \2605 \2605 \2605\2605 \2605 \2605 \2605 \2605';
+  color: #eea10c;
+}

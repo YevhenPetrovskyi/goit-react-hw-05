@@ -1,0 +1,25 @@
+.moviesList {
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  margin: 0 auto;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.movieItem {
+  width: 300px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.movieItem:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 0px 15px rgba(128, 0, 128, 0.5),
+    0px 0px 15px rgba(128, 0, 128, 0.6), 0px 0px 15px rgba(128, 0, 128, 0.7),
+    0px 0px 15px rgba(128, 0, 128, 0.8), 0px 0px 15px rgba(128, 0, 128, 0.9);
+}
