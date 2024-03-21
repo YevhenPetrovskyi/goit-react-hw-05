@@ -32,6 +32,7 @@ const MoviesPage = () => {
         try {
           setError(null);
           setLoading(true);
+          setMovies(null);
           const data = await fetchMoviesSearch(query, page);
           setMovies(data.results);
           setTotalPages(data.total_pages);
@@ -45,10 +46,10 @@ const MoviesPage = () => {
     }
   }, [query, page]);
 
-  const loadSelectedPage = ({ selected }) => {
+  const loadSelectedPage = ({ selected: selectedPage }) => {
     setSearchParams({
       query: !query ? '' : query,
-      page: parseInt(selected + 1),
+      page: parseInt(selectedPage) + 1,
     });
   };
 
@@ -57,7 +58,7 @@ const MoviesPage = () => {
       <div className="container">
         <SearchBar onSearch={handleSearch} />
         {loading && <Loader />}
-        {!error && !loading && movies && (
+        {!error && !loading && movies && page && (
           <>
             <MoviesList movies={movies} />
             {totalPages > 1 && (

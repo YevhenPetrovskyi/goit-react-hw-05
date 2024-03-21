@@ -2,8 +2,9 @@
   list-style: none;
   padding: 0;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
+  gap: 5px;
   cursor: pointer;
   margin: 8px 8px;
 }
@@ -12,13 +13,6 @@
   background-color: #1e50ff;
   color: #fff;
   border-radius: 50%;
-}
-
-.pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
 }
 
 .pageItem {
