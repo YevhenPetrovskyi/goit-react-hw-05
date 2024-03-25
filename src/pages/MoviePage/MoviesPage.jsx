@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState } from 'react';
 
 import SearchBar from '../../components/SearchBar/SearchBar';
 import Loader from '../../components/Loader/Loader';
-import MoviesList from '../../components/MoviesList/MoviesList';
+import MovieList from '../../components/MovieList/MovieList';
 import PaginationList from '../../components/PaginationList/PaginationList';
 
 const MoviesPage = () => {
@@ -60,7 +60,7 @@ const MoviesPage = () => {
         {loading && <Loader />}
         {!error && !loading && movies && page && (
           <>
-            <MoviesList movies={movies} />
+            <MovieList movies={movies} />
             {totalPages > 1 && (
               <PaginationList
                 onClick={loadSelectedPage}

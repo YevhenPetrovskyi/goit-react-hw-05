@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { fetchTrendingMovies } from '../../API/tmdb-api';
 
-import MoviesList from '../../components/MoviesList/MoviesList';
+import MovieList from '../../components/MovieList/MovieList';
 import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
 import Loader from '../../components/Loader/Loader';
 
@@ -30,7 +30,7 @@ const HomePage = () => {
       <div className="container">
         <h1>Trending today</h1>
         {error && <ErrorMessage message={error} />}
-        {movies && <MoviesList movies={movies} />}
+        {movies && <MovieList movies={movies} />}
         {loading && <Loader />}
       </div>
     </section>

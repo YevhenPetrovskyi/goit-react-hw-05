@@ -1,9 +1,9 @@
 import { Link, useLocation } from 'react-router-dom';
 import MovieItem from './MovieItem/MovieItem';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
-import css from './MoviesList.module.css';
+import css from './MovieList.module.css';
 
-const MoviesList = ({ movies }) => {
+const MovieList = ({ movies }) => {
   const location = useLocation();
 
   return (
@@ -27,4 +27,4 @@ const MoviesList = ({ movies }) => {
   );
 };
 
-export default MoviesList;
+export default MovieList;
