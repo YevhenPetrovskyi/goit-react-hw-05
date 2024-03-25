@@ -3,8 +3,7 @@ import { Suspense, lazy } from 'react';
 
 import NotFound from './pages/NotFound/NotFound';
 import Loader from './components/Loader/Loader';
-import Navigation from './components/Navigation/Navigation';
-// import Layout from './components/Layout/Layout';
+import Layout from './components/Layout/Layout';
 
 const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
 const MoviesPage = lazy(() => import('./pages/MoviePage/MoviesPage'));
@@ -16,19 +15,16 @@ import './App.css';
 
 function App() {
   return (
-    <>
-      <Navigation />
-      <main>
-        <Suspense fallback={<Loader />}>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/movies" element={<MoviesPage />} />
-            <Route path="/movies/:movieId/*" element={<MovieDetailsPage />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </Suspense>
-      </main>
-    </>
+    <Layout>
+      <Suspense fallback={<Loader />}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/movies" element={<MoviesPage />} />
+          <Route path="/movies/:movieId/*" element={<MovieDetailsPage />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Suspense>
+    </Layout>
   );
 }
 
